@@ -1,6 +1,6 @@
 import React from "react";
 import { Card as SemanticCard } from 'semantic-ui-react'
-// import Loader from 'react-loader-spinner';
+import Loader from 'react-loader-spinner';
 
 
 
@@ -16,6 +16,7 @@ function Card(props){
 
         
     <SemanticCard>
+        {props.person.name ? (
         <SemanticCard.Content>
         <SemanticCard.Header> 
             {props.person.name}
@@ -27,7 +28,10 @@ function Card(props){
             <p><strong>Hair Color: </strong>{props.person.hair_color}</p>
             <p><strong>Skin Color: </strong>{props.person.skin_color}</p>
             </SemanticCard.Description>
-           </SemanticCard.Content>
+           </SemanticCard.Content>)
+           : <div>Loading..</div>
+        //    (<Loader type="Watch" color="#bb1333" height="90" width="60" />)
+        }
             </SemanticCard>
     
     

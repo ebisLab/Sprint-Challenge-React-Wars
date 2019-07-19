@@ -13,8 +13,9 @@ function Card(props){
 
 
     return  ( 
+
         
-    <SemanticCard className="cards">
+    <SemanticCard>
         <SemanticCard.Content>
         <SemanticCard.Header> 
             {props.person.name}
@@ -28,6 +29,7 @@ function Card(props){
             </SemanticCard.Description>
            </SemanticCard.Content>
             </SemanticCard>
+    
     
       
 

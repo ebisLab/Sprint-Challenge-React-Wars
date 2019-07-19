@@ -7,13 +7,14 @@ import { Card as SemanticCard } from 'semantic-ui-react'
 function Card(props){
     
     console.log(props.person)
+    console.log('Test', Object.keys(props.person))
     // const info= props.data;
     // console.log(info, 'info')
 
 
     return  ( 
         
-    <SemanticCard>
+    <SemanticCard className="cards">
         <SemanticCard.Content>
         <SemanticCard.Header> 
             {props.person.name}
@@ -21,7 +22,7 @@ function Card(props){
 
             <SemanticCard.Description> 
             <p><strong>Height: </strong>{props.person.height}</p>
-            <p><strong>Weight: </strong>{props.person.weight}</p>
+            <p><strong>Weight: </strong>{props.person.mass} kg</p>
             <p><strong>Hair Color: </strong>{props.person.hair_color}</p>
             <p><strong>Skin Color: </strong>{props.person.skin_color}</p>
             </SemanticCard.Description>
